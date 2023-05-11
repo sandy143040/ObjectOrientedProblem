@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ObjectOrientedProblem
 {
-    public class UniqueElements
+    public class ElementFrequency
     {
-        public static void PrintUniqueElements(int[] arr)
+        public static void CountElementFrequency(int[] arr)
         {
             Dictionary<int, int> counts = new Dictionary<int, int>();
             foreach (int num in arr)
@@ -22,12 +22,10 @@ namespace ObjectOrientedProblem
                     counts[num] = 1;
                 }
             }
+            Console.WriteLine("Element frequency in the array:");
             foreach (KeyValuePair<int, int> kvp in counts)
             {
-                if (kvp.Value == 1)
-                {
-                    Console.WriteLine(kvp.Key);
-                }
+                Console.WriteLine($"{kvp.Key} occurs {kvp.Value} time(s)");
             }
         }
     }
