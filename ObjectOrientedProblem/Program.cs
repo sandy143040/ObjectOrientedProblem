@@ -10,11 +10,20 @@ namespace ObjectOrientedProblem
     {
         static void Main(string[] args)
         {
-            int[] arr = { 1, 2, 3, 4, 1, 2, 5, 6, 7, 5 };
+            Console.Write("Enter the size of the array: ");
+            int size = int.Parse(Console.ReadLine());
 
-            int duplicates = DuplicateCounter.CountDuplicates(arr);
+            int[] arr = new int[size];
+            Console.WriteLine("Enter the elements of the array:");
 
-            Console.WriteLine("Total number of duplicate elements in the array: {0}", duplicates);
+            for (int i = 0; i < size; i++)
+            {
+                arr[i] = int.Parse(Console.ReadLine());
+            }
+
+            Console.WriteLine("Unique elements in the array:");
+            UniqueElements.PrintUniqueElements(arr);
+
             Console.ReadLine();
         }
     }
