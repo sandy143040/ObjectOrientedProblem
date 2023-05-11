@@ -10,8 +10,11 @@ namespace ObjectOrientedProblem
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Object oriented practice problem");
+            int[] arr = { 1, 2, 3, 4, 1, 2, 5, 6, 7, 5 };
 
+            int duplicates = DuplicateCounter.CountDuplicates(arr);
+
+            Console.WriteLine("Total number of duplicate elements in the array: {0}", duplicates);
             Console.ReadLine();
         }
     }
